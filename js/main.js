@@ -209,6 +209,23 @@ document.addEventListener("DOMContentLoaded", () => {
     tiltCard.addEventListener("mouseleave", () => {
       tiltFrame.style.transform = "rotateX(0deg) rotateY(0deg)";
     });
+
+    if (window.matchMedia("(hover: none)").matches) {
+      const setTouchActive = (isActive) => {
+        tiltCard.classList.toggle("touch-active", isActive);
+      };
+
+      tiltCard.addEventListener("click", () => {
+        setTouchActive(true);
+      });
+
+      document.addEventListener("touchstart", (event) => {
+        if (!tiltCard.contains(event.target)) {
+          setTouchActive(false);
+          tiltFrame.style.transform = "rotateX(0deg) rotateY(0deg)";
+        }
+      }, { passive: true });
+    }
   }
 
   document.querySelectorAll(".project-tilt-container").forEach((container) => {

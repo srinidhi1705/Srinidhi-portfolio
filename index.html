@@ -14,6 +14,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="src/animation.css">
+    <style>
+        @media (hover: none) {
+            #tilt-card.touch-active .touch-photo-accent {
+                transform: scale(1.1);
+            }
+
+            #tilt-card.touch-active .touch-photo-image {
+                filter: grayscale(0%) brightness(1.05) contrast(1.1);
+                transform: scale(1.05);
+            }
+
+            #tilt-card.touch-active .touch-photo-label {
+                color: rgb(158 158 158 / 0.6);
+            }
+        }
+    </style>
 </head>
 <body class="bg-void-base text-parchment font-dm overflow-x-hidden cursor-auto">
     <!-- Loading Screen -->
@@ -175,15 +191,15 @@
                         <div class="absolute top-3 left-3 w-1/4 h-1/5 border-t border-l border-white/20 z-10 pointer-events-none"></div>
                         <div class="absolute bottom-3 right-3 w-1/4 h-1/5 border-b border-r border-white/20 z-10 pointer-events-none"></div>
 
-                        <span class="absolute top-5 left-5 w-4 h-4 border-t border-l border-ember/50 z-20 transition-transform group-hover:scale-110"></span>
-                        <span class="absolute bottom-5 right-5 w-4 h-4 border-b border-r border-ember/50 z-20 transition-transform group-hover:scale-110"></span>
+                        <span class="touch-photo-accent absolute top-5 left-5 w-4 h-4 border-t border-l border-ember/50 z-20 transition-transform group-hover:scale-110"></span>
+                        <span class="touch-photo-accent absolute bottom-5 right-5 w-4 h-4 border-b border-r border-ember/50 z-20 transition-transform group-hover:scale-110"></span>
 
                         <img src="assets/images/sri.jpeg"
                             alt="Kummari Srinidhi"
-                            class="w-full h-full object-cover grayscale contrast-110 brightness-90 transition-all duration-500 ease-in-out group-hover:grayscale-0 group-hover:brightness-105 group-hover:scale-105 pointer-events-none"/>
+                            class="touch-photo-image w-full h-full object-cover grayscale contrast-110 brightness-90 transition-all duration-500 ease-in-out group-hover:grayscale-0 group-hover:brightness-105 group-hover:scale-105 pointer-events-none"/>
                     </div>
 
-                    <p class="mt-6 text-center md:text-right font-mono text-[11px] tracking-[0.4em] uppercase text-ash/30 transition-colors group-hover:text-ash/60">
+                    <p class="touch-photo-label mt-6 text-center md:text-right font-mono text-[11px] tracking-[0.4em] uppercase text-ash/30 transition-colors group-hover:text-ash/60">
                         System.Profile // 001
                     </p>
                 </div>
