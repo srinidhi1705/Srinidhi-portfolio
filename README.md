@@ -22,6 +22,7 @@ This portfolio highlights:
 
 - Customer Churn Prediction
 - V2V Communication Demo
+- Published Research Paper
 
 ## Run Locally
 
@@ -78,4 +79,3 @@ npm run dev
 ## Deployment
 
 This project is deployed through GitHub-based hosting. Any updates made locally must be committed and pushed to GitHub for the live site to refresh.
-
